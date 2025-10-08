@@ -32,6 +32,11 @@
   <div class="floating-shape shape1"></div>
   <div class="floating-shape shape2"></div>
   <div class="floating-shape shape3"></div>
+
+
+
+  <canvas id="particles"></canvas>
+
 </header>
 
 <!-- Services Section -->
@@ -57,24 +62,27 @@
     <div id="skills" class="resume-column">
       <h3>Skills</h3>
       <ul>
-        <li>JavaScript, HTML, CSS</li>
-        <li>React, Node.js</li>
-        <li>Python, Java</li>
-        <li>Database Management</li>
+       <li>Languages: Java, HTML, CSS, JavaScript, SQL ,Python,C,C++</li>
+       <li>Frameworks & Tools: React.js, Node.js, MySQL, Git, GitHub, Tailwind CSS</li>
+<li>Core Concepts: OOPs, DBMS, OS, CN, DSA (Learning)</li>
+<li>Platforms: VS Code, IntelliJ IDEA, MySQL Workbench, Postman</li>
       </ul>
     </div>
+
     <div id="certifications" class="resume-column hidden">
-      <h3>Certifications</h3>
-      <ul>
-        <li>Full Stack Development - XYZ Academy</li>
-        <li>Cloud Computing - ABC Institute</li>
-        <li>Data Structures & Algorithms - Coursera</li>
-      </ul>
+  <h3>Certifications</h3>
+  <div class="certifications-container">
+    <div class="cert-card">
+      <img src="cert1.jpg" alt="Java Fullstack Certification">
+      
     </div>
-    <div id="about" class="resume-column hidden">
-      <h3>About Me</h3>
-      <p>Passionate software engineering student seeking innovative projects. I love creating clean, scalable solutions with elegant designs.</p>
-    </div>
+    <div class="cert-card">
+      <img src="cert2.jpg" alt="Cybersecurity Basics">
+      
+   </div>
+
+   
+
   </div>
 </section>
 
@@ -82,24 +90,44 @@
 <section id="projects">
   <h2>Projects</h2>
   <div class="projects-container">
-    <div class="project-card" onclick="openProject('https://live-demo1.com')">
-      <h3>Project 1</h3>
-      <p>Web App Example</p>
+    <div class="project-card" >
+      <div class="project-content">
+        <div class="project-desc">
+          <h3>Sin Esfuerzo Elegance</h3>
+          <p>Modelling Agency Website</p>
+        </div>
+        <div class="project-img">
+          <img src="project1.png" alt="Project 1">
+        </div>
+      </div>
     </div>
-    <div class="project-card" onclick="openProject('https://live-demo2.com')">
-      <h3>Project 2</h3>
-      <p>React Project</p>
+
+    <div class="project-card">
+      <div class="project-content">
+        <div class="project-desc">
+          <h3>Clavis</h3>
+          <p>Java-Based Caesar Cipher Encryption Puzzle</p>
+        </div>
+        <div class="project-img">
+          <img src="project2.jpeg" alt="Project 2">
+        </div>
+      </div>
     </div>
-    <div class="project-card" onclick="openProject('https://live-demo3.com')">
-      <h3>Project 3</h3>
-      <p>Fullstack App</p>
-    </div>
-    <div class="project-card" onclick="openProject('https://live-demo4.com')">
-      <h3>Project 4</h3>
-      <p>API Integration</p>
+
+    <div class="project-card" >
+      <div class="project-content">
+        <div class="project-desc">
+          <h3>Cask & Quill</h3>
+          <p>Audiobook Website</p>
+        </div>
+        <div class="project-img">
+          <img src="project3.jpeg" alt="Project 3">
+        </div>
+      </div>
     </div>
   </div>
 </section>
+
 
 <!-- Contact Section -->
 <section id="contact">
