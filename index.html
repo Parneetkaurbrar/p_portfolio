@@ -4,143 +4,114 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Parneet Brar | Portfolio</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-/* Global */
-* { margin:0; padding:0; box-sizing:border-box; scroll-behavior:smooth; }
-body { font-family:'Inter', sans-serif; background:#f5f5f5; color:#111827; }
-a { text-decoration:none; color:inherit; }
-section { padding:80px 20px; max-width:1000px; margin:auto; }
-
-/* Header */
-header { position:fixed; top:0; width:100%; background:#fff; display:flex; justify-content:space-between; align-items:center; padding:15px 50px; box-shadow:0 2px 10px rgba(0,0,0,0.05); z-index:1000; }
-header h1 { font-weight:700; font-size:1.5rem; }
-nav a { margin-left:25px; font-weight:500; transition:0.3s; }
-nav a:hover { color:#2563eb; }
-
-/* Hero */
-#hero { text-align:center; padding-top:120px; padding-bottom:120px; }
-#hero h1 { font-size:3rem; font-weight:700; margin-bottom:15px; }
-#hero p { font-size:1.2rem; color:#555; margin-bottom:30px; }
-#hero .btn { padding:12px 25px; background:#2563eb; color:#fff; border-radius:5px; font-weight:600; transition:0.3s; display:inline-block; }
-#hero .btn:hover { background:#1e40af; }
-
-/* Projects */
-.projects { display:grid; grid-template-columns:1fr; gap:40px; }
-@media(min-width:768px){ .projects { grid-template-columns:1fr 1fr; } }
-.project-card { background:#fff; border-radius:10px; padding:25px; box-shadow:0 6px 18px rgba(0,0,0,0.06); transition:0.3s; }
-.project-card:hover { transform:translateY(-5px); box-shadow:0 12px 24px rgba(0,0,0,0.12); }
-.project-card h3 { font-weight:600; margin-bottom:10px; font-size:1.3rem; }
-.project-card p { color:#555; }
-.project-card .tech { margin-top:10px; display:flex; flex-wrap:wrap; gap:10px; }
-.tech span { background:#e5e7eb; padding:5px 12px; border-radius:20px; font-size:0.85rem; font-weight:500; }
-.project-card a { display:inline-block; margin-top:15px; color:#2563eb; font-weight:500; transition:0.3s; }
-.project-card a:hover { color:#1e40af; }
-
-/* Skills */
-.skills { display:flex; flex-wrap:wrap; gap:15px; justify-content:center; }
-.skill { background:#e5e7eb; padding:8px 15px; border-radius:20px; font-weight:500; color:#111827; }
-
-/* Contact */
-#contact form { display:flex; flex-direction:column; gap:15px; max-width:500px; margin:auto; }
-#contact input, #contact textarea { padding:12px 15px; border:1px solid #d1d5db; border-radius:5px; font-size:1rem; resize:none; }
-#contact button { padding:12px; background:#2563eb; color:#fff; border:none; border-radius:5px; font-weight:600; cursor:pointer; transition:0.3s; }
-#contact button:hover { background:#1e40af; }
-
-/* Footer */
-footer { text-align:center; padding:20px; font-size:0.9rem; color:#777; border-top:1px solid #e5e5e5; margin-top:50px; }
-
-/* Smooth Scroll Active Link Highlight */
-nav a.active { color:#2563eb; font-weight:600; }
-</style>
+<link rel="stylesheet" href="styles.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 </head>
 <body>
 
-<!-- Header -->
-<header>
-<h1>Parneet Brar</h1>
-<nav>
-<a href="#hero" class="nav-link">Home</a>
-<a href="#projects" class="nav-link">Projects</a>
-<a href="#skills" class="nav-link">Skills</a>
-<a href="#contact" class="nav-link">Contact</a>
-</nav>
+<!-- Custom Cursor -->
+<div class="cursor"></div>
+
+<!-- Hero Section -->
+<header id="home">
+  <div class="hero-container">
+    <div class="hero-text">
+      <h1>Parneet Brar</h1>
+      <p>Aspiring Software Engineer | Building Innovative & Scalable Solutions</p>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/YOUR_LINKEDIN" target="_blank">LinkedIn</a>
+        <a href="https://github.com/YOUR_GITHUB" target="_blank">GitHub</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="p.JPG" alt="Parneet Kaur">
+    </div>
+  </div>
+  <!-- Floating Shapes -->
+  <div class="floating-shape shape1"></div>
+  <div class="floating-shape shape2"></div>
+  <div class="floating-shape shape3"></div>
 </header>
 
-<!-- Hero -->
-<section id="hero">
-<h1>Hi, I'm Parneet Brar</h1>
-<p>Aspiring Software Engineer | Full-Stack Developer | Problem Solver</p>
-<a href="ParneetBrar_Resume.pdf" download class="btn">Download Resume</a>
+<!-- Services Section -->
+<section id="services">
+  <h2>Services</h2>
+  <div class="services-container">
+    <div class="service-card">Web Development</div>
+    <div class="service-card">UI/UX Design</div>
+    <div class="service-card">Software Engineering</div>
+    <div class="service-card">Project Management</div>
+  </div>
 </section>
 
-<!-- Projects -->
+<!-- Resume Section -->
+<section id="resume">
+  <h2>Resume</h2>
+  <div class="resume-toggle">
+    <button onclick="showColumn('skills')">Skills</button>
+    <button onclick="showColumn('certifications')">Certifications</button>
+    <button onclick="showColumn('about')">About Me</button>
+  </div>
+  <div class="resume-columns">
+    <div id="skills" class="resume-column">
+      <h3>Skills</h3>
+      <ul>
+        <li>JavaScript, HTML, CSS</li>
+        <li>React, Node.js</li>
+        <li>Python, Java</li>
+        <li>Database Management</li>
+      </ul>
+    </div>
+    <div id="certifications" class="resume-column hidden">
+      <h3>Certifications</h3>
+      <ul>
+        <li>Full Stack Development - XYZ Academy</li>
+        <li>Cloud Computing - ABC Institute</li>
+        <li>Data Structures & Algorithms - Coursera</li>
+      </ul>
+    </div>
+    <div id="about" class="resume-column hidden">
+      <h3>About Me</h3>
+      <p>Passionate software engineering student seeking innovative projects. I love creating clean, scalable solutions with elegant designs.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Projects Section -->
 <section id="projects">
-<h2>Projects</h2>
-<div class="projects">
-<div class="project-card">
-<h3>Sin Esfuerzo Elegance – Modelling Agency Website</h3>
-<p>Responsive website with portfolio galleries, booking forms, and dynamic React components with smooth UI transitions.</p>
-<div class="tech"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>React.js</span></div>
-<a href="#" target="_blank">View Demo</a>
-</div>
-
-<div class="project-card">
-<h3>Clavis – Java Caesar Cipher Puzzle Game</h3>
-<p>Interactive Java game implementing Caesar Cipher with MySQL backend for scores and progress tracking. OOP principles applied.</p>
-<div class="tech"><span>Java</span><span>MySQL</span><span>OOP</span></div>
-<a href="#" target="_blank">View Code / Demo</a>
-</div>
-
-<div class="project-card">
-<h3>Audiobook Website – Full-Stack Web App</h3>
-<p>Complete audiobook platform with Flask backend and HTML/CSS/JS frontend. Features user auth, CRUD operations, and responsive interface.</p>
-<div class="tech"><span>Python</span><span>Flask</span><span>HTML/CSS</span><span>JavaScript</span></div>
-<a href="#" target="_blank">View Demo</a>
-</div>
-</div>
+  <h2>Projects</h2>
+  <div class="projects-container">
+    <div class="project-card" onclick="openProject('https://live-demo1.com')">
+      <h3>Project 1</h3>
+      <p>Web App Example</p>
+    </div>
+    <div class="project-card" onclick="openProject('https://live-demo2.com')">
+      <h3>Project 2</h3>
+      <p>React Project</p>
+    </div>
+    <div class="project-card" onclick="openProject('https://live-demo3.com')">
+      <h3>Project 3</h3>
+      <p>Fullstack App</p>
+    </div>
+    <div class="project-card" onclick="openProject('https://live-demo4.com')">
+      <h3>Project 4</h3>
+      <p>API Integration</p>
+    </div>
+  </div>
 </section>
 
-<!-- Skills -->
-<section id="skills">
-<h2>Technical Skills</h2>
-<div class="skills">
-<span>Java</span><span>Python</span><span>JavaScript</span><span>HTML/CSS</span>
-<span>React.js</span><span>Flask</span><span>MySQL</span><span>Git</span>
-</div>
-</section>
-
-<!-- Contact -->
+<!-- Contact Section -->
 <section id="contact">
-<h2>Contact Me</h2>
-<form>
-<input type="text" placeholder="Your Name" required>
-<input type="email" placeholder="Your Email" required>
-<textarea rows="5" placeholder="Your Message" required></textarea>
-<button type="submit">Send Message</button>
-</form>
+  <h2>Contact Me</h2>
+  <form action="mailto:your-email@example.com" method="POST" enctype="text/plain">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
 </section>
 
-<!-- Footer -->
-<footer>&copy; 2025 Parneet Brar. All rights reserved.</footer>
-
-<script>
-// Smooth scroll active link highlight
-const sections = document.querySelectorAll('section');
-const navLinks = document.querySelectorAll('.nav-link');
-
-window.addEventListener('scroll', () => {
-let current = '';
-sections.forEach(section => {
-const sectionTop = section.offsetTop - 80;
-if(scrollY >= sectionTop){ current = section.getAttribute('id'); }
-});
-navLinks.forEach(link => {
-link.classList.remove('active');
-if(link.getAttribute('href').includes(current)){ link.classList.add('active'); }
-});
-});
-</script>
-
+<script src="script.js"></script>
 </body>
 </html>
